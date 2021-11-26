@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <!--Roboto fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,500&display=swap"
+        rel="stylesheet" />
+    <!--Righteous fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,500&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Fashion Driven</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-wrapper">
+            <img src="assets/headerLogo.png" alt="Logo do site">
+        </div>
+    </header>
+    <main>
+        <div class="request-wrapper">
+            <div class="questions-box">
+                <div class="model-wrapper">
+                    <p>Escolha o modelo</p>
+                    <div class="box">
+                        <div class="model-card card-size" onclick="selectModel(this)">
+                            <div class="thumbnail">
+                                <img src="assets/model1.png" alt="tshirt-model">
+                            </div>
+                            <span>T-shirt</span>
+                        </div>
+                        <div class="model-card card-size" onclick="selectModel(this)">
+                            <div class="thumbnail">
+                                <img src="assets/model2.png" alt="camiseta-model">
+                            </div>
+                            <span>Camiseta</span>
+                        </div>
+                        <div class="model-card card-size" onclick="selectModel(this)">
+                            <div class="thumbnail">
+                                <img src="assets/model3.png" alt="manga loga-model">
+                            </div>
+                            <span>Manga Longa</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="neck-wrapper">
+                    <p>Escolha a gola</p>
+                    <div class="box">
+                        <div class="neck-card card-size" onclick="selectNeck(this)">
+                            <div class="thumbnail">
+                                <img src="assets/v-neck.png" alt="v-neck">
+                            </div>
+                            <span>Gola v</span>
+                        </div>
+                        <div class="neck-card card-size" onclick="selectNeck(this)">
+                            <div class="thumbnail">
+                                <img src="assets/gola-redonda.png" alt="gola-redonda">
+                            </div>
+                            <span>Gola redonda</span>
+                        </div>
+                        <div class="neck-card card-size" onclick="selectNeck(this)">
+                            <div class="thumbnail">
+                                <img src="assets/polo.png" alt="polo">
+                            </div>
+                            <span>Gola polo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="material-wrapper">
+                    <p>Escolha o material</p>
+                    <div class="box">
+                        <div class="material-card card-size" onclick="selectMaterial(this)">
+                            <div class="thumbnail">
+                                <img src="assets/silk 1.png" alt="seda">
+                            </div>
+                            <span>seda</span>
+                        </div>
+                        <div class="material-card card-size" onclick="selectMaterial(this)">
+                            <div class="thumbnail">
+                                <img src="assets/organic-cotton 1.png" alt="algodao">
+                            </div>
+                            <span>Algodão</span>
+                        </div>
+                        <div class="material-card card-size" onclick="selectMaterial(this)">
+                            <div class="thumbnail">
+                                <img src="assets/quimica 1.png" alt="poliéster">
+                            </div>
+                            <span>Poliéster</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-wrapper">
+                    <p>Imagem de referência</p>
+                    <input type="Insira o link">
+                    <button class="finish-request">Confirme pedido</button>
+                </div>
+            </div>
+            <div class="slogan-box">
+                <img src="assets/slogan.png" alt="slogan do site">
+            </div>
+        </div>
+    </main>
+    <section>
+        <p>Ultimos Pedidos</p>
+        <div class="last-orders-wrapper">
+            <div class="card-wrapper">
+                <img class="orders-img" src="assets/imgaem modelo.png" alt="">
+                <p class="author"><span class="creator">Criador:</span> Agatha</p>
+            </div>
+            <div class="card-wrapper">
+                <img class="orders-img" src="assets/imgaem modelo.png" alt="">
+                <p class="author"><span class="creator">Criador:</span> Agatha</p>
+            </div>
+            <div class="card-wrapper">
+                <img class="orders-img" src="assets/imgaem modelo.png" alt="">
+                <p class="author"><span class="creator">Criador:</span> Agatha</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
