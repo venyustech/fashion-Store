@@ -244,3 +244,7 @@ section {
 .form.error input {
     border: 2px solid red;
 }
+
+.hide {
+    display: none;
+}
