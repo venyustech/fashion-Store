@@ -60,18 +60,6 @@ header {
     width: 70%;
 }
 
-input {
-    all: unset;
-    box-sizing: border-box;
-    outline: none;
-    row-gap: 91px;
-    width: 100%;
-    height: 40px;
-    left: 121.99px;
-    top: 729.92px;
-    background: #F2F2F2;
-    border-radius: 10px;
-}
 
 button {
     all: unset;
@@ -80,15 +68,12 @@ button {
     width: 100%;
     background: #C4C4C4;
     border-radius: 10px;
-    margin-top: 24px;
+    margin-top: 5px;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.image-wrapper p {
-    margin-top: 15%;
-    margin-bottom: 2%;
 }
 
 .neck-wrapper p, .material-wrapper {
@@ -96,9 +81,16 @@ button {
 }
 
 section {
-    background-color: #70A1DC;
-    margin-top: 5%;
-    margin-left: 10%;
+    background-color: #f2f2f2;
+    width: 100%;
+
+}
+
+.last-orders-box {
+    position: relative;
+    top: 50px;
+    left: 130px;
+
 }
 
 .card-wrapper {
@@ -114,6 +106,9 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 80%;
+    overflow: hidden;
+    overflow-x: auto;
 }
 
 .author {
@@ -136,6 +131,7 @@ section {
 .orders-img {
     width: 180px;
     height: 180px;
+    border-radius: 10px;
 }
 
 .selected {
@@ -145,4 +141,106 @@ section {
 
 .background-blue {
     background-color: blue;
+}
+
+.form {
+    display: flex;
+}
+
+.image-form p {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.image-wrapper p {
+    margin-top: 15%;
+    margin-bottom: 2%;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+}
+
+.form-input {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #F2F2F2;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+.form-input:hover {
+    background-color: #ecebeb;
+}
+
+.form-input:focus {
+    background-color: #F2F2F2;
+}
+
+.form-input:focus~.form-label,
+.form-input:not(:placeholder-shown).form-input:not(:focus)~.form-label {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+    background-color: white;
+    color: black;
+}
+
+.form-label {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    color: #818181;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.icons {
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.form small {
+    visibility: hidden;
+    position: absolute;
+    right: 40px;
+    top: -0.8rem;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.form.success input {
+    border: 2px solid green;
+}
+
+.form.success .icons.check-circle {
+    visibility: visible;
+    color: green;
+    font-size: 22px;
+}
+
+.form.error .icons.exclamation-circle {
+    visibility: visible;
+    color: red;
+    font-size: 22px;
+}
+
+.form.error small {
+    visibility: visible;
+}
+
+
+.form.error input {
+    border: 2px solid red;
 }
