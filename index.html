@@ -25,112 +25,132 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo-wrapper">
-            <img src="assets/headerLogo.png" alt="Logo do site">
+    <div class="login-wrapper">
+        <div class="login-box">
+            <img class="login-logo" src="assets/headerLogo.png" alt="">
+            <ion-icon class="login-icon" name="person-circle-outline"></ion-icon>
+            <h1>Login</h1>
+            <div class="input-form">
+                <div class="form-login">
+                    <input onchange="checkLogin()" type="text" id="login-username" class="login-input"
+                        autocomplete="off" placeholder="">
+                    <label for="login-username" class="login-label">Username</label>
+                    <ion-icon class="icons-login check-circle" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="icons-login exclamation-circle" name="alert-circle"></ion-icon>
+                    <small>inválido</small>
+                </div>
+                <button class="login-bottom" onclick="enterUser()">Entrar</button>
+            </div>
+
         </div>
-    </header>
-    <main>
-        <div class="request-wrapper">
-            <div class="questions-box">
-                <div class="model-wrapper">
-                    <p>Escolha o modelo</p>
-                    <div class="box">
-                        <div class="model-card card-size" onclick="selectModel(this)">
-                            <div class="thumbnail">
-                                <img src="assets/model1.png" alt="tshirt-model">
+    </div>
+    <div class="container hide">
+        <header class="header">
+            <div class="logo-wrapper">
+                <img src="assets/headerLogo.png" alt="Logo do site">
+            </div>
+        </header>
+        <main>
+            <div class="request-wrapper">
+                <div class="questions-box">
+                    <div class="model-wrapper">
+                        <p>Escolha o modelo</p>
+                        <div class="box">
+                            <div class="model-card card-size" onclick="selectModel(this)">
+                                <div class="thumbnail">
+                                    <img src="assets/model1.png" alt="tshirt-model">
+                                </div>
+                                <span>T-shirt</span>
                             </div>
-                            <span>T-shirt</span>
+                            <div class="model-card card-size" onclick="selectModel(this)">
+                                <div class="thumbnail">
+                                    <img src="assets/model2.png" alt="camiseta-model">
+                                </div>
+                                <span>Camiseta</span>
+                            </div>
+                            <div class="model-card card-size" onclick="selectModel(this)">
+                                <div class="thumbnail">
+                                    <img src="assets/model3.png" alt="manga loga-model">
+                                </div>
+                                <span>Manga longa</span>
+                            </div>
                         </div>
-                        <div class="model-card card-size" onclick="selectModel(this)">
-                            <div class="thumbnail">
-                                <img src="assets/model2.png" alt="camiseta-model">
+
+                    </div>
+
+                    <div class="neck-wrapper">
+                        <p>Escolha a gola</p>
+                        <div class="box">
+                            <div class="neck-card card-size" onclick="selectNeck(this)">
+                                <div class="thumbnail">
+                                    <img src="assets/v-neck.png" alt="v-neck">
+                                </div>
+                                <span>Gola v</span>
                             </div>
-                            <span>Camiseta</span>
-                        </div>
-                        <div class="model-card card-size" onclick="selectModel(this)">
-                            <div class="thumbnail">
-                                <img src="assets/model3.png" alt="manga loga-model">
+                            <div class="neck-card card-size" onclick="selectNeck(this)">
+                                <div class="thumbnail">
+                                    <img src="assets/gola-redonda.png" alt="gola-redonda">
+                                </div>
+                                <span>Gola redonda</span>
                             </div>
-                            <span>Manga longa</span>
+                            <div class="neck-card card-size" onclick="selectNeck(this)">
+                                <div class="thumbnail">
+                                    <img src="assets/polo.png" alt="polo">
+                                </div>
+                                <span>Gola polo</span>
+                            </div>
                         </div>
                     </div>
 
+                    <div class="material-wrapper">
+                        <p>Escolha o material</p>
+                        <div class="box">
+                            <div class="material-card card-size" onclick="selectMaterial(this)">
+                                <div class="thumbnail">
+                                    <img src="assets/silk 1.png" alt="seda">
+                                </div>
+                                <span>Seda</span>
+                            </div>
+                            <div class="material-card card-size" onclick="selectMaterial(this)">
+                                <div class="thumbnail">
+                                    <img src="assets/organic-cotton 1.png" alt="algodao">
+                                </div>
+                                <span>Algodão</span>
+                            </div>
+                            <div class="material-card card-size" onclick="selectMaterial(this)">
+                                <div class="thumbnail">
+                                    <img src="assets/quimica 1.png" alt="poliéster">
+                                </div>
+                                <span>Poliéster</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-form ">
+                        <p>Imagem de referência</p>
+                        <div class="form">
+                            <input onchange="checkInput()" type="text" id="link-image" class="form-input"
+                                autocomplete="off" placeholder="">
+                            <label for="link-image" class="form-label">Insira o link</label>
+                            <ion-icon class="icons check-circle" name="checkmark-circle"></ion-icon>
+                            <ion-icon class="icons exclamation-circle" name="alert-circle"></ion-icon>
+                            <small>Link inválido</small>
+                        </div>
+                        <button class="finish-request" onclick="send()">Confirme pedido</button>
+                    </div>
                 </div>
-
-                <div class="neck-wrapper">
-                    <p>Escolha a gola</p>
-                    <div class="box">
-                        <div class="neck-card card-size" onclick="selectNeck(this)">
-                            <div class="thumbnail">
-                                <img src="assets/v-neck.png" alt="v-neck">
-                            </div>
-                            <span>Gola v</span>
-                        </div>
-                        <div class="neck-card card-size" onclick="selectNeck(this)">
-                            <div class="thumbnail">
-                                <img src="assets/gola-redonda.png" alt="gola-redonda">
-                            </div>
-                            <span>Gola redonda</span>
-                        </div>
-                        <div class="neck-card card-size" onclick="selectNeck(this)">
-                            <div class="thumbnail">
-                                <img src="assets/polo.png" alt="polo">
-                            </div>
-                            <span>Gola polo</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="material-wrapper">
-                    <p>Escolha o material</p>
-                    <div class="box">
-                        <div class="material-card card-size" onclick="selectMaterial(this)">
-                            <div class="thumbnail">
-                                <img src="assets/silk 1.png" alt="seda">
-                            </div>
-                            <span>Seda</span>
-                        </div>
-                        <div class="material-card card-size" onclick="selectMaterial(this)">
-                            <div class="thumbnail">
-                                <img src="assets/organic-cotton 1.png" alt="algodao">
-                            </div>
-                            <span>Algodão</span>
-                        </div>
-                        <div class="material-card card-size" onclick="selectMaterial(this)">
-                            <div class="thumbnail">
-                                <img src="assets/quimica 1.png" alt="poliéster">
-                            </div>
-                            <span>Poliéster</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-form ">
-                    <p>Imagem de referência</p>
-                    <div class="form">
-                        <input onchange="checkInput()" type="text" id="link-image" class="form-input" autocomplete="off"
-                            placeholder="">
-                        <label for="link-image" class="form-label">Insira o link</label>
-                        <ion-icon class="icons check-circle" name="checkmark-circle"></ion-icon>
-                        <ion-icon class="icons exclamation-circle" name="alert-circle"></ion-icon>
-                        <small>Link inválido</small>
-                    </div>
-                    <button class="finish-request" onclick="send()">Confirme pedido</button>
+                <div class="slogan-box">
+                    <img src="assets/slogan.png" alt="slogan do site">
                 </div>
             </div>
-            <div class="slogan-box">
-                <img src="assets/slogan.png" alt="slogan do site">
+        </main>
+        <section>
+            <div class="last-orders-box">
+                <p>Ultimos Pedidos</p>
+                <div class="last-orders-wrapper"></div>
             </div>
-        </div>
-    </main>
-    <section>
-        <div class="last-orders-box">
-            <p>Ultimos Pedidos</p>
-            <div class="last-orders-wrapper"></div>
-        </div>
-    </section>
-
+        </section>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

@@ -2,10 +2,49 @@ let isRequestFinished = 0;
 const nRequestsTotal = 3;
 let userInput;
 
-function signUser(errorHandled) {
-    userInput = prompt("Escreva seu nome");
+function checkLogin() {
+    const username = document.querySelector(".login-input");
+    const usernameValue = username.value.trim();
+    if (usernameValue == '') {
+        setErrorForLogin(username, "Vazio");
+    }
+    else {
+        setSuccessForLogin(username);
+        userOnline();
+    }
 }
-signUser();
+function setErrorForLogin(input, message) {
+    const formControl = input.parentNode;
+    const small = formControl.querySelector('small');
+    small.innerText = message;
+    formControl.className = 'form-login error';
+}
+function setSuccessForLogin(input) {
+    const formControl = input.parentNode;
+    formControl.className = 'form-login success';
+}
+
+function userOnline() {
+    const enterBottom = document.querySelector('.login-bottom');
+    enterBottom.classList.add("background-blue");
+}
+function enterUser() {
+    const username = document.querySelector(".login-input");
+    const usernameValue = username.value.trim();
+    if (usernameValue) {
+        const loginLayout = document.querySelector('.login-wrapper');
+        loginLayout.classList.add("hide");
+        const mainLayout = document.querySelector('.container');
+        mainLayout.classList.remove("hide");
+        userInput = usernameValue;
+        lastOrders();
+        setInterval(lastOrders, 3000);
+    }
+}
+// function signUser(errorHandled) {
+//     userInput = prompt("Escreva seu nome");
+// }
+// signUser();
 
 function selectModel(bottom) {
     const selectedBottom = document.querySelector(".model-wrapper .selected");
@@ -35,7 +74,6 @@ function removeSelected(selected) {
 function addSelected(selection) {
     selection.classList.add("selected");
 }
-
 function finishRequest() {
     const imageValue = document.querySelector(".form-input").value
     if (isRequestFinished == nRequestsTotal && isLinkValid(imageValue)) {
@@ -44,6 +82,8 @@ function finishRequest() {
         request.classList.add("background-blue")
     }
 }
+
+
 
 function checkInput() {
     const image = document.querySelector(".form-input")
@@ -64,6 +104,7 @@ function checkInput() {
         return true;
     }
 }
+
 function setErrorFor(input, message) {
     const formControl = input.parentNode;
     const small = formControl.querySelector('small');
@@ -204,8 +245,7 @@ function lastOrders() {
     promisse.then(lastOrdersLoaded);
     promisse.catch(loadingLastOrdersError);
 }
-lastOrders();
-setInterval(lastOrders, 3000);
+
 function loadingLastOrdersError(error) {
     console.log("#1 error")
 }
