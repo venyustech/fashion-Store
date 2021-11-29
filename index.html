@@ -7,17 +7,11 @@
 
     <link rel="stylesheet" href="reset.css" />
     <!--Roboto fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,500&display=swap"
-        rel="stylesheet" />
-    <!--Righteous fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,500&display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css" />
 
@@ -29,8 +23,6 @@
         <div class="login-box">
             <img class="login-logo" src="assets/headerLogo.png" alt="">
             <img class="login-image" src="assets/login.png" alt="imagem de login">
-
-            <!-- <ion-icon class="login-icon" name="person-circle-outline"></ion-icon> -->
             <h1>Login</h1>
             <div class="input-form">
                 <div class="form-login">
@@ -151,6 +143,19 @@
                 <div class="last-orders-wrapper"></div>
             </div>
         </section>
+    </div>
+    <div class="confirm-request-wrapper hide">
+        <div class="confirm-box">
+            <img class="last-order-logo" src="assets/headerLogo.png" alt="">
+            <div class="last-order">
+            </div>
+            <div class="buttons-confirm">
+                <button class="cancel-request styles-requests-button"
+                    onclick="cancelLastOrderRequest()">Cancelar</button>
+                <button class="confirm-request styles-requests-button"
+                    onclick="confirmLastOrderRequest()">Confirmar</button>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

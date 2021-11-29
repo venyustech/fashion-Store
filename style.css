@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .login-wrapper {
     height: 100vh;
     background-color: #404EED;
@@ -6,6 +10,7 @@
     align-items: center;
     justify-content: center;
 }
+
 
 .login-box {
     width: 300px;
@@ -33,6 +38,7 @@ h1 {
     border-radius: 50%;
     margin-bottom: 16px;
 }
+
 
 .login-logo {
     width: 97%;
@@ -234,9 +240,8 @@ section {
 }
 
 .last-orders-box {
-    position: relative;
-    top: 50px;
-    left: 130px;
+    padding-top: 50px;
+    padding-left: 130px;
 
 }
 
@@ -246,14 +251,15 @@ section {
     width: 190px;
     margin-right: 16px;
     margin-top: 16px;
-    padding: 16px 0;
+    padding: 16px 5px;
+    height: 250px;
 }
 
 .last-orders-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 90%;
     overflow: hidden;
     overflow-x: auto;
 }
@@ -262,6 +268,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    word-break: break-all;
 }
 
 .creator {
@@ -323,6 +331,7 @@ section {
     font-family: inherit;
     font-size: inherit;
     outline: none;
+    padding-left: 15px;
 }
 
 .form-input:hover {
@@ -390,6 +399,81 @@ section {
 
 .form.error input {
     border: 2px solid red;
+}
+
+.last-order {
+    display: flex;
+    padding: 30px;
+}
+
+.confirm-request-wrapper {
+    height: 100vh;
+    background-color: rgba(249, 249, 250, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.confirm-box {
+    overflow: hidden;
+    background-color: rgba(96, 135, 242, 1);
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.last-order-logo {
+    border-radius: 10px;
+    padding: 1% 100%;
+}
+
+.last-order img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 180px;
+    width: 180px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.confirm-box p {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    width: 300px;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    min-height: fit-content;
+    min-height: 40px;
+}
+
+.confirm-box span {
+    font-weight: normal;
+}
+
+.buttons-confirm {
+    display: flex;
+    color: white;
+    font-weight: bold;
+}
+
+.styles-requests-button {
+    width: 100%;
+    padding: 0 20px;
+    margin: 20px 10px;
+}
+
+.cancel-request {
+    background-color: rgb(218, 64, 58);
+}
+
+.confirm-request {
+    background-color: rgb(54, 151, 54);
 }
 
 .hide {
