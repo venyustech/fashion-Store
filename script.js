@@ -240,7 +240,6 @@ function handleSendSuccess(answer) {
  *********************************/
 
 function lastOrders() {
-    console.log("entrei")
     const promisse = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts");
     promisse.then(lastOrdersLoaded);
     promisse.catch(loadingLastOrdersError);

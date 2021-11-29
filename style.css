@@ -25,12 +25,13 @@ h1 {
 
 }
 
-.login-icon {
+.login-icon, .login-image {
     height: 100px;
     width: 100px;
-    color: #404EED;
-    border: 5px solid white;
+    background-color: #f2f2f2;
+    border: 2px solid white;
     border-radius: 50%;
+    margin-bottom: 16px;
 }
 
 .login-logo {
