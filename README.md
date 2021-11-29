@@ -1,1 +1,1 @@
-# https-github.com-venyustech-projeto-bonus-02---Fashion-Store
+# Este projeto é um site para escolha de roupas na Fashion-Store
