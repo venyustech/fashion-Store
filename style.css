@@ -198,6 +198,7 @@ header {
     height: 100px;
     background: #F2F2F2;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .model-card img {
@@ -242,6 +243,7 @@ section {
 .last-orders-box {
     padding-top: 50px;
     padding-left: 130px;
+    padding-bottom: 30px;
 
 }
 
@@ -262,6 +264,7 @@ section {
     width: 90%;
     overflow: hidden;
     overflow-x: auto;
+    cursor: pointer;
 }
 
 .author {
